@@ -6,7 +6,7 @@
 
 <Text
 	text="Happy birthday"
-	position={{ x: -50, y: $titlePositionY, z: 10 }}
+	position={{ x: -45, y: $titlePositionY, z: 10 }}
 	rotation={{ y: degToRad(90) }}
 	fontSize={$titleSize}
 	fillOpacity={$titleOpacity}
@@ -16,7 +16,7 @@
 />
 <Text
 	text="Sohaib"
-	position={{ x: -50, y: $titlePositionY - 10, z: 10 }}
+	position={{ x: -45, y: $titlePositionY - 10, z: 10 }}
 	rotation={{ y: degToRad(90) }}
 	fontSize={$titleSize}
 	fillOpacity={$titleOpacity}
