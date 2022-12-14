@@ -18,13 +18,10 @@
 	const startTheShow = async () => {
 		overlayIsVisible = false;
 		sceneIsPlaying.set(true);
-		// cameraPosition.set(ogCameraPosition);
-		// targetPosition.set(ogTargetPosition);
 		setTimeout(() => {
 			cameraPosition.set(ogCameraPosition);
 			targetPosition.set(ogTargetPosition);
 		}, 1000);
-		// controlsEnabled.set(true);
 		setTimeout(() => {
 			controlsEnabled.set(true);
 		}, 3000);
