@@ -4,7 +4,7 @@
 	import Components from '$lib/Components/Components.svelte';
 	import SEO from './SEO.svelte';
 	import Overlay from '$lib/Components/Overlay/Overlay.svelte';
-	import { sceneIsPlaying } from '$lib/Stores/global';
+	import { sceneIsPlaying, titleOpacity, titlePositionY, titleSize } from '$lib/Stores/global';
 	import {
 		cameraPosition,
 		controlsEnabled,
@@ -18,16 +18,22 @@
 	const startTheShow = async () => {
 		overlayIsVisible = false;
 		sceneIsPlaying.set(true);
-		cameraPosition.set(ogCameraPosition);
-		targetPosition.set(ogTargetPosition);
-		// setTimeout(() => {
-		// 	cameraPosition.set(ogCameraPosition);
-		// 	targetPosition.set(ogTargetPosition);
-		// }, 1000);
-		controlsEnabled.set(true);
-		// setTimeout(() => {
-		// 	controlsEnabled.set(true);
-		// }, 3000);
+		// cameraPosition.set(ogCameraPosition);
+		// targetPosition.set(ogTargetPosition);
+		setTimeout(() => {
+			cameraPosition.set(ogCameraPosition);
+			targetPosition.set(ogTargetPosition);
+		}, 1000);
+		// controlsEnabled.set(true);
+		setTimeout(() => {
+			controlsEnabled.set(true);
+		}, 3000);
+
+		setTimeout(() => {
+			$titleOpacity = 1;
+			$titleSize = 6;
+			$titlePositionY = 10;
+		}, 2000);
 	};
 </script>
 
