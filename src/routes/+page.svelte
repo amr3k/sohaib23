@@ -13,6 +13,8 @@
 		targetPosition
 	} from '$lib/Stores/camera';
 
+	export const prerender = false;
+
 	let overlayIsVisible = true;
 
 	const startTheShow = async () => {
